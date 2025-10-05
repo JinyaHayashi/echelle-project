@@ -1,0 +1,13 @@
+numpy
+scipy
+matplotlib
+pandas
+tifffile
+pillow
+
+[dev]
+pytest
+ruff
+black
+flake8
+jupyter

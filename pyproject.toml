@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "echelle_pkg"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Echelle spectrograph calibration and analysis tools"
+readme = "README.md"
+authors = [{ name = "Hayashi Jinya" }]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "tifffile",
+    "pillow",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+    "flake8",
+    "jupyter",
+]
+
+[project.scripts]
+echelle-cli = "echelle_pkg.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["echelle_pkg*"]
